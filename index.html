@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You for the Birthday Wishes!</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f8ff;
+            color: #2c3e50;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            margin-top: 50px;
+            font-size: 3em;
+            color: #3498db;
+        }
+        p {
+            font-size: 1.5em;
+            margin: 20px auto;
+            max-width: 600px;
+            line-height: 1.6;
+        }
+        .thank-you-card {
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            padding: 20px;
+            margin: 20px;
+            max-width: 600px;
+        }
+        .emojis {
+            font-size: 2em;
+            margin: 20px 0;
+        }
+        .input-section {
+            margin: 20px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            font-size: 1em;
+            border: 2px solid #3498db;
+            border-radius: 5px;
+            width: 60%;
+        }
+        button {
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="thank-you-card">
+        <h1>Thank You! 😊</h1>
+        <p id="message">
+            Enter your name to personalize the message for friends and family. 💖
+        </p>
+        <div class="input-section">
+            <input type="text" id="nameInput" placeholder="Enter your name here">
+            <button onclick="updateMessage()">Show Message</button>
+        </div>
+        <div class="emojis">🎂🥳🎉</div>
+    </div>
+
+    <script>
+        function updateMessage() {
+            // Get the nam
+            const name = document.getElementById("nameInput").value.trim();
+
+            // Update the message for friends and family
+            const messageElement = document.getElementById("message");
+            if (name) {
+                messageElement.innerHTML = `
+                    Dear ${name},<br>
+                    Thank you for your amazing birthday wishes! You made my day so special. I'm truly grateful to have friends and family like you. ❤️
+                `;
+            } else {
+                messageElement.innerHTML = "Please enter your name to personalize the message!";
+            }
+        }
+    </script>
+</body>
+</html>
